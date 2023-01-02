@@ -1,0 +1,52 @@
+﻿<head>
+    <link href="Pages/ProfileDetails/ProfileDetails.css" rel="stylesheet" />
+</head>
+
+<div class="container">
+
+    <!--PROFILE PICTURE AND INFO-->
+    
+    <div class="profile-details">
+        <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+        
+        <button type="button" class="btn-close"/>
+
+        <h1>Matheux Jr.</h1>
+        <span>Software engineer as a freelance</span>
+
+    </div>
+    
+    <!--BUTTONS-->
+
+    <div class="profile-buttons-menu">
+        <button type="button" class="btn btn-primary">Follow</button>
+        <button type="button" class="btn btn-danger">Block</button>
+    </div>
+
+    <!--NUMBERS SECTION-->
+
+    <div class="profile-info">
+        <h5>Followers</h5>
+        <h3>1212</h3>
+    </div>
+
+
+</div>
+
+
+
+@code {
+    private string profileSource;
+    private string followersQuantity;
+
+    private void ShowImage(int id)
+    {
+        profileSource = $"Resources/Images/dotnet_bot.svg";
+    }
+
+    private void ShowFollowersQuantity()
+    {
+        Random random = new Random();
+        followersQuantity = random.Next().ToString();
+    }
+}

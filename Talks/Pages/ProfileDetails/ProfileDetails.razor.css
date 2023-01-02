@@ -1,0 +1,33 @@
+﻿body {
+
+}
+
+
+.avatar {
+    vertical-align: middle;
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+}
+
+.btn-close {
+    vertical-align: top;
+    float: right;
+}
+
+.profile-details h1 {
+    margin: 30px auto 10px;
+}
+
+.profile-buttons-menu {
+    width: 100%;
+}
+
+.profile-buttons-menu button {
+    border-radius: 10%;
+    margin-inline: 10px;
+}
+
+.profile-buttons-menu btn btn-primary {
+
+}
