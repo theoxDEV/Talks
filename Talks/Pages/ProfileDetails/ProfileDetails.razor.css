@@ -2,6 +2,10 @@
 
 }
 
+.container {
+    position: relative;
+}
+
 
 .avatar {
     vertical-align: middle;
@@ -20,14 +24,21 @@
 }
 
 .profile-buttons-menu {
-    width: 100%;
+    justify-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    margin: 10px;
+    margin-left: 0px;
+    height: 65px;
 }
 
 .profile-buttons-menu button {
     border-radius: 10%;
     margin-inline: 10px;
+    padding: 10px;
 }
 
-.profile-buttons-menu btn btn-primary {
-
+.btn btn-primary {
+    width: 100%;
 }
