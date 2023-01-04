@@ -1,9 +1,16 @@
-﻿body {
-
+﻿html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI Light';
+    font-size: x-large;
+    margin: 0;
+    padding: 0;
+    background-color: coral;
 }
 
 .container {
-    position: relative;
+    height: 90%;
+    width: 90%;
 }
 
 
@@ -14,9 +21,21 @@
     border-radius: 10%;
 }
 
+.country-avatar {
+    position: absolute;
+    top: 150px;
+    left: 150px;
+}
+
 .btn-close {
     vertical-align: top;
     float: right;
+}
+
+.profile-details {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .profile-details h1 {
@@ -27,18 +46,15 @@
     justify-items: center;
     display: flex;
     justify-content: center;
-    background-color: black;
-    margin: 10px;
+    margin: 20px;
     margin-left: 0px;
     height: 65px;
 }
 
 .profile-buttons-menu button {
+    margin-inline: 5px;
+    display: inline-block;
     border-radius: 10%;
-    margin-inline: 10px;
-    padding: 10px;
-}
-
-.btn btn-primary {
-    width: 100%;
+    transition: all .3s ease-in;
+    outline: none;
 }

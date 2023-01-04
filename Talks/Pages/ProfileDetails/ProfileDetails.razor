@@ -1,4 +1,6 @@
-﻿<head>
+﻿@page "/profile-details"
+
+<head>
     <link href="Pages/ProfileDetails/ProfileDetails.css" rel="stylesheet" />
 </head>
 
@@ -7,28 +9,40 @@
     <!--PROFILE PICTURE AND INFO-->
     
     <div class="profile-details">
-        <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+        <img src="@profileImageSrc" alt="Avatar" class="avatar">
+        <img src="images/brazil_avatar.png" class="country-avatar">
         
         <button type="button" class="btn-close"/>
 
         <h1>Matheux Jr.</h1>
-        <span>Software engineer as a freelance</span>
+        <span>Software engineer at NASA</span>
 
     </div>
     
     <!--BUTTONS-->
 
     <div class="profile-buttons-menu">
-        <button type="button" class="btn btn-primary">Follow</button>
-        <button type="button" class="btn btn-danger">Block</button>
+        <button type="button" class="@followButtonClass"
+                @onclick="FollowButton_Clicked">
+            <span>@followButtonText</span>
+        </button>
+
+        <button type="button" class="btn btn-danger" @onclick="BlockButton_Clicked">
+            <span>@blockButtonText</span>
+        </button>
+
+
     </div>
 
     <!--NUMBERS SECTION-->
-
-    <div class="profile-info">
-        <h5>Followers</h5>
-        <h3>1212</h3>
-    </div>
+    @if (blocked)
+    {
+        <p>USER BLOCKED</p>
+    }
+    else
+    {
+        <ProfileDetailsInfo currentFollowers="@currentFollowers" />
+    }
 
 
 </div>
@@ -36,17 +50,46 @@
 
 
 @code {
-    private string profileSource;
-    private string followersQuantity;
+    private int currentFollowers = 12121;
+    private bool blocked { get; set; } = false;
+    private string followButtonClass { get; set; } = "btn btn-primary";
+    private string followButtonText { get; set; } = "Follow";
+    private string blockButtonText { get; set; } = "Block";
 
-    private void ShowImage(int id)
+    private string profileImageSrc => blocked ? "images/img_blocked.jpg" : "images/img_avatar.png";
+
+
+    [Parameter]
+    public int IncrementAmount { get; set; } = 1;
+
+
+    private void FollowButton_Clicked()
     {
-        profileSource = $"Resources/Images/dotnet_bot.svg";
+        if (followButtonText == "Follow")
+        {
+            currentFollowers += IncrementAmount;
+            followButtonClass = "btn btn-danger";
+            followButtonText = "Unfollow";
+        }
+        else
+        {
+            currentFollowers -= IncrementAmount;
+            followButtonClass = "btn btn-primary";
+            followButtonText = "Follow";
+        }
     }
 
-    private void ShowFollowersQuantity()
+    private void BlockButton_Clicked()
     {
-        Random random = new Random();
-        followersQuantity = random.Next().ToString();
+        if (blockButtonText == "Block")
+        {
+            blockButtonText = "Unblock";
+            blocked = true;
+        }
+        else
+        {
+            blockButtonText = "Block";
+            blocked = false;
+        }
     }
 }

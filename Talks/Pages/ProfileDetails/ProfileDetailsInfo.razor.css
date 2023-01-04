@@ -1,0 +1,21 @@
+﻿body {
+}
+
+
+.profile-info {
+    display: flex;
+}
+
+.profile-info div {
+    width: 100%;
+}
+
+.profile-info span {
+    color: gray;
+}
+
+.vl {
+    border-left: 1px groove;
+    height: 20px;
+    margin: 20px auto 20px 40px;
+}
