@@ -4,6 +4,8 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Talks", "Talks\Talks.csproj", "{3F1FA3F8-401F-457E-9AAD-95B4BD39E210}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Talks.API", "Talks.API\Talks.API.csproj", "{071D8A65-034C-4658-A49A-B06CCF6D4284}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,6 +18,10 @@ Global
 		{3F1FA3F8-401F-457E-9AAD-95B4BD39E210}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F1FA3F8-401F-457E-9AAD-95B4BD39E210}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3F1FA3F8-401F-457E-9AAD-95B4BD39E210}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{071D8A65-034C-4658-A49A-B06CCF6D4284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{071D8A65-034C-4658-A49A-B06CCF6D4284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{071D8A65-034C-4658-A49A-B06CCF6D4284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{071D8A65-034C-4658-A49A-B06CCF6D4284}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
