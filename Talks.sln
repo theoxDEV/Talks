@@ -2,9 +2,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Talks", "Talks\Talks.csproj", "{3F1FA3F8-401F-457E-9AAD-95B4BD39E210}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Talks.Client", "Talks\Talks.Client.csproj", "{3F1FA3F8-401F-457E-9AAD-95B4BD39E210}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Talks.API", "Talks.API\Talks.API.csproj", "{071D8A65-034C-4658-A49A-B06CCF6D4284}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Talks.Server", "Talks.API\Talks.Server.csproj", "{071D8A65-034C-4658-A49A-B06CCF6D4284}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
