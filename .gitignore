@@ -364,3 +364,4 @@ FodyWeavers.xsd
 
 # Data Folder
 Data/
+/Talks.API/appsettings.Development.json
