@@ -7,5 +7,6 @@
         public string TwilioApiKey { get; set; }
         public string TwilioApiSecret { get; set; }
         public string TwiMLApplicationSid { get; set; }
+        public string TwilioPhoneNumber { get; set; }
     }
 }

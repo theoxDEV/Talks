@@ -1,0 +1,9 @@
+$ApplicationSid = "SKb7a9bbb616bf64262f254e1651ac42ac"
+
+# Make sure ngrok is running before running this
+$NgrokApi = 'https://3585-2804-2860-640c-2700-498f-d41d-58b1-609e.sa.ngrok.io'
+$TwilioTunnelsObject = (Invoke-WebRequest "$NgrokApi/tunnels").Content | ConvertFrom-Json
+$PublicBaseUrl = $TwilioTunnelsObject.tunnels.public_url | Where-Object {$_.StartsWith('https')}
+
+$PublicOutgoingVoiceUrl = "$PublicBaseUrl/voice/outgoing"
+twilio api:core:applications:update --sid=$ApplicationSid --voice-url=$PublicOutgoingVoiceUrl --voice-method=POST
